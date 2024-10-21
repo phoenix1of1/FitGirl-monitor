@@ -3,7 +3,7 @@
 **<span style="font-size:18px;">What is it?</span>**  
 Simply put, it's a notification tool to alert a person when a repack has been made available.
 
-**<span style="font-size:18px;">Why did you make it?</span>**
+**<span style="font-size:18px;">Why did you make it?</span>**  
 RSS Readers are everywhere but I don't need a feature rich reader to collect all posts from a feed. I just need a tool that will alert me when the latest repack is available 
 so that if I am busy with something else, my tool will grab my attention. I added the Discord function just because I don't want to always have to TAB between screens and 
 since Discord is available on mobile and I have my mobile always around me, it made sense to use my phone as another prompt tool.
