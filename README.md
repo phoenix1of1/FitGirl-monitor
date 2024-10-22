@@ -22,6 +22,11 @@ Change the number to anything you desire, just remember that it's in seconds so 
 Open discord_notifier.py in your favourite editor and look for: WEBHOOK_URL = "",
 Insert your webhook url between the quotes and you are good to go.
 
+**<span style="font-size:18px;">How do I set a custom sound?</span>**  
+Open up RSS_Checker.py and look for: audio_player = AudioPlayer("path/to/your/audiofile.mp3")
+Insert the path to your desired audiofile and you are good to go!
+I find that it's best to put your audiofile in the folder containing the script, makes things nice and easy.
+
 **<span style="font-size:18px;">How do I run the tool?</span>**  
 When you download the tool, just open a terminal, navigate to where you stored the scripts and run RSS_Checker.py
 
