@@ -1,5 +1,9 @@
 **<center><span style="font-size:24px;">FitGirl Monitor Tool</span></center>**
 
+**<span style="font-size:18px;">How do I install required packages?</span>**
+Ensure that you open a termainl, navigate to the folder containing the requirements.txt file and then 
+run the following command: pip install -r requirements.txt
+
 **<span style="font-size:18px;">What is it?</span>**  
 Simply put, it's a notification tool to alert a person when a repack has been made available.
 
