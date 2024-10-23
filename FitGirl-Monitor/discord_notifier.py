@@ -1,9 +1,13 @@
 import requests
 
 # Discord webhook URL
-WEBHOOK_URL = "https://discordapp.com/api/webhooks/1297250640421978222/tLAXWYBdv_QnlElu_Jv5JuAATK3DoKEqxlep4bBToQeJHuOdEZYUh1iltANhK2xnDDba", # Insert your Discord webhook URL here and wrap it in quotes. Ex: "https://discordapp.com/api/webhooks/65498818987357/1568789845621859"
+WEBHOOK_URL = "YOUR_DISCORD_WEBHOOK_URL"  # Placeholder text
 
 def send_discord_notification(message):
+    if WEBHOOK_URL == "YOUR_DISCORD_WEBHOOK_URL":
+        print("Discord webhook URL is not set. Skipping notification.")
+        return
+    
     data = {
         "content": message
     }
