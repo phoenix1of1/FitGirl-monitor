@@ -3,7 +3,6 @@ import time
 from datetime import datetime, timedelta
 import logger  # Import the logging module
 from discord_notifier import send_discord_notification  # Import the notification function
-from audio_player import AudioPlayer  # Import the AudioPlayer module
 
 # URL of the RSS feed
 RSS_FEED_URL = "http://fitgirl-repacks.site/feed/"
@@ -14,9 +13,6 @@ YELLOW = '\033[93m'
 PURPLE = '\033[95m'
 LIGHT_BLUE = '\033[94m'
 RESET = '\033[0m'
-
-# Initialize AudioPlayer with the path to the audio file
-audio_player = AudioPlayer("path/to/your/audiofile.mp3")
 
 # Function to fetch and parse the RSS feed
 def fetch_feed():
@@ -48,9 +44,6 @@ def check_for_new_posts(latest_post_id):
             # Send notification to Discord
             send_discord_notification(f"New post detected: {latest_entry.title}")
             send_discord_notification(f"Second latest post: {second_latest_entry.title if second_latest_entry else 'None'}")
-            
-            # Play audio notification
-            audio_player.play()
             
             return latest_entry_id, True, latest_entry.title
         else:
