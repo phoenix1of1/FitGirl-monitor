@@ -3,6 +3,8 @@ import time
 from datetime import datetime, timedelta
 import logger  # Import the logging module
 from discord_notifier import send_discord_notification  # Import the notification function
+import winsound  # Import the winsound function
+import os  # Import the os module to check file existence
 
 # URL of the RSS feed
 RSS_FEED_URL = "http://fitgirl-repacks.site/feed/"
@@ -13,6 +15,16 @@ YELLOW = '\033[93m'
 PURPLE = '\033[95m'
 LIGHT_BLUE = '\033[94m'
 RESET = '\033[0m'
+
+# Path to the sound file
+SOUND_FILE_PATH = r"path\to\file\level-up-191997.mp3"
+
+# Function to play sound alert
+def play_sound_alert():
+    if os.path.exists(SOUND_FILE_PATH):
+        winsound.PlaySound(SOUND_FILE_PATH, winsound.SND_FILENAME)
+    else:
+        logger.log_warning(f"Sound file not found: {SOUND_FILE_PATH}")
 
 # Function to fetch and parse the RSS feed
 def fetch_feed():
@@ -44,6 +56,9 @@ def check_for_new_posts(latest_post_id):
             # Send notification to Discord
             send_discord_notification(f"New post detected: {latest_entry.title}")
             send_discord_notification(f"Second latest post: {second_latest_entry.title if second_latest_entry else 'None'}")
+            
+            # Play sound alert
+            play_sound_alert()
             
             return latest_entry_id, True, latest_entry.title
         else:
@@ -90,6 +105,8 @@ def main():
         
         if new_posts_found:
             print("New posts were found.")
+            # Play sound alert when new posts are found
+            play_sound_alert()
         else:
             print("No new posts found.")
         

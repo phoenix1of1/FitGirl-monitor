@@ -28,5 +28,9 @@ When you download the tool, just open a terminal, navigate to where you stored t
 **<span style="font-size:18px;">How do I close the tool?</span>**  
 On Windows, use CTRL & C to interupt a running script, once interupted, you can close the terminal.
 
+**<span style="font-size:18px;">How do I change the sound being played??</span>**  
+Open RSS_Checker.py in your favourite editor, find: SOUND_FILE_PATH =
+After the equals sign, just enter the path to your desired sound clip and you are good to go.
+
 **<span style="font-size:18px;">What has this tool been tested on?</span>**  
 Windows 11
