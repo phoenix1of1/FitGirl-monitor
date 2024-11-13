@@ -26,11 +26,17 @@ Insert your webhook url between the quotes and you are good to go.
 When you download the tool, just open a terminal, navigate to where you stored the scripts and run RSS_Checker.py
 
 **<span style="font-size:18px;">How do I close the tool?</span>**  
-On Windows, use CTRL & C to interupt a running script, once interupted, you can close the terminal.
+On Windows, use CTRL & C to interrupt a running script, once interrupted, you can close the terminal.
 
-**<span style="font-size:18px;">How do I change the sound being played??</span>**  
+**<span style="font-size:18px;">How do I change the sound being played?</span>**  
 Open RSS_Checker.py in your favourite editor, find: SOUND_FILE_PATH =
 After the equals sign, just enter the path to your desired sound clip and you are good to go.
 
 **<span style="font-size:18px;">What has this tool been tested on?</span>**  
 Windows 11
+
+**<span style="font-size:18px;">Changes</span>**
+Updated RSS_Checker.py to now print the URL to the terminal.
+
+**<span style="font-size:18px;">Other notes</span>**
+Please be aware that when updating, you can just copy RSS_Checker.py from the updated package and replace the file in your existing directory.
